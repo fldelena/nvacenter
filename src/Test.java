@@ -12,6 +12,8 @@ public class Test  {
 
     public static void main(String[] args) {
 
+        System.out.println("-------------------Обычная дебетовая карта-------------------");
+
         BankCard debitCard = new DebitCard(1000);
         System.out.println(debitCard.pay(900));
         debitCard.topUpBalance(1100);
@@ -19,7 +21,7 @@ public class Test  {
         debitCard.balanceInfo();
         debitCard.allInfo();
 
-        System.out.println("-------------------------------------");
+        System.out.println("-----------------Накопительная дебетовая карта---------------");
 
         BankCard debitSavingsCard = new DebitSavingsCard(2000);
         System.out.println(debitSavingsCard.pay(900.00));
@@ -28,7 +30,7 @@ public class Test  {
         debitSavingsCard.balanceInfo();
         debitSavingsCard.allInfo();
 
-        System.out.println("-------------------------------------");
+        System.out.println("-----------------Скидка 3% при покупке от 10к----------------");
 
         BankCard debitDiscountCard = new DebitDiscountCard(2000);
         System.out.println(debitDiscountCard.pay(900));
@@ -37,7 +39,7 @@ public class Test  {
         debitDiscountCard.balanceInfo();
         debitDiscountCard.allInfo();
 
-        System.out.println("-------------------------------------");
+        System.out.println("-------------Накопление 0.5% при зачислении > 10к------------");
 
         BankCard debitDepositCard = new DebitDepositCard(2000);
         System.out.println(debitDepositCard.pay(1200));
@@ -46,7 +48,7 @@ public class Test  {
         debitDepositCard.balanceInfo();
         debitDepositCard.allInfo();
 
-        System.out.println("-------------------------------------");
+        System.out.println("-------------------Обычная кредитная карта-------------------");
 
         BankCard creditCard = new CreditCard(10000.50);
         System.out.println(creditCard.pay(5000));
@@ -55,7 +57,7 @@ public class Test  {
         creditCard.balanceInfo();
         creditCard.allInfo();
 
-        System.out.println("-------------------------------------");
+        System.out.println("-----------------Кредитная карта с бонусами------------------");
 
         BankCard creditBuyerCard = new CreditBuyerCard(10000.50);
         System.out.println(creditBuyerCard.pay(5000));
@@ -66,7 +68,7 @@ public class Test  {
         creditBuyerCard.balanceInfo();
         creditBuyerCard.allInfo();
 
-        System.out.println("-------------------------------------");
+        System.out.println("-------------Кредитка с кэшбэком при тратах > 5к-------------");
 
         BankCard creditSpenderCard = new CreditSpenderCard(10000.50);
         System.out.println(creditSpenderCard.pay(1000));
@@ -76,7 +78,7 @@ public class Test  {
         creditSpenderCard.balanceInfo();
         creditSpenderCard.allInfo();
 
-        System.out.println("-------------------------------------");
+        System.out.println("-----Кредитка со скидкой при наличии собственных средств-----");
 
         BankCard creditFavoriteCard= new CreditFavoriteCard(10000);
         creditFavoriteCard.topUpBalance(20000);
